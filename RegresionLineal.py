@@ -28,7 +28,7 @@ theta = np.linalg.inv(X_ones.T @ X_ones) @ X_ones.T @ y_train # El arroba s la m
 #theta = (X^T X)^{-1} \cdot X^T y$ se trata de esa ecuacion normal
 
 print(theta) 
-#[-101.12390488 (es el B0 es el BIAS el punto de partida)    1.00938673 (es el B1 la pendiente)] 
+#[-94.24478962 (es el B0 es el BIAS el punto de partida)    0.97477323 (es el B1 la pendiente)] 
 
 #Peso del usuario que no sabemos segun prediccion
 
