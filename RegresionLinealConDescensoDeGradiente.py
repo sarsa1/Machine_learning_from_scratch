@@ -61,5 +61,5 @@ def predict(altura):
     peso = y_Scaler.inverse_transform(peso)
     return peso.item()
 
-alt = float(input('Introduce una altura para predecir el peso de la personas : '))
+alt = float(input('Introduce una altura para predecir el peso de esa persona : '))
 print(f'El usuario con una altura de {alt}cm pesará unos {predict(alt):.2f} kg')
