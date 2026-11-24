@@ -13,6 +13,8 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=42, test_
 
 w = np.zeros([len(X_train.columns), 1])
 
+L = np.full([1, 1], 0.01)
+
 #Valores límite que se le pueden introducir al modelo para predecir
 minimo_valor_permitido_altura = df['Altura'].min()
 maximo_valor_permitido_altura = df['Altura'].max()
@@ -39,15 +41,19 @@ y_test = y_Scaler.transform(y_test)
 
 b, lr = 0, 0.02
 
+
+
+
 epochs = 90
 
 historial = []
 
 for epoch in range(epochs):
     y_pred = X_train @ w + b
-    dw = (2/len(X_train)) * X_train.T @ (y_pred - y_train)
+    dw = (2/len(X_train)) * X_train.T @ (y_pred - y_train) + (w @ L * 2)
     db = (2/len(X_train)) * np.sum(y_pred - y_train)
-    historial.append(np.mean((y_pred - y_train)**2))
+    error = np.mean((y_pred - y_train)**2)
+    historial.append(error)
     w = w - (lr * dw)
     b = b - (lr * db)
 
