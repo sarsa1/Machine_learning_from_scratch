@@ -12,7 +12,6 @@ scikit-learn se usa solo para la partición train/test (`train_test_split`) y la
 | `RegresionLinealConDescensoDeGradiente.py` | Lineal simple | Descenso de gradiente | `dataset_alturas_pesos.csv` |
 | `RegresionLinealMultivariable.py` | Lineal multivariable | Descenso de gradiente con regularización L2 | `dataset_multivariable.csv` |
 | `RegresionPolinomica.py` | Polinómica (grado 3) | Descenso de gradiente con regularización L2 | `dataset_polinomico.csv` |
-| `generar_dataset_polinomico.py` | Generador de datos sintéticos | — | — |
 
 ## Modelos
 
